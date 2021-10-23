@@ -5,6 +5,9 @@
 <% end %>
 
 <% @tweet.each do |e| %>
+     <div class="trim">
+        <img src="https://pbs.twimg.com/media/CQsH6fbUEAEzPp2?format=jpg&name=360x360">
+    </div>
     <p> 
         <%= e.message %> 
         <%= ((Time.current - e.tdate) / 60).to_i.to_s + "分前" %>
@@ -14,4 +17,4 @@
     </p> 
 <% end %>
 
-<%= link_to 'ツイートする', '/tweets/new' %>
+<%= link_to 'ツイートする', new_tweet_path %>

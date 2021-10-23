@@ -10,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+   <div id="main">
+    <div id="sidebar" style="width:25%; float:left;">
+     <%= render "sidebar" %>
+    </div>
+
+    <div id="content" style="width:75%; float:right;">
+     <%= render "content" %>
+    </div>
+   </main>
+
   </body>
 </html>
